@@ -1,16 +1,36 @@
-# React + Vite
+# Sazón · Recetario Digital (Momento 1)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Traslado del diseño estático a React + Vite, con componentes reutilizables
+y datos estáticos manejados con estados locales (`useState`).
 
-Currently, two official plugins are available:
+## Historia de usuario
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**HU-01 · Catálogo de productos**
+Como visitante del portal Sazón, quiero ver los productos del catálogo en
+tarjetas y filtrarlos por marca, para encontrar rápidamente lo que busco.
 
-## React Compiler
+**Criterios de aceptación**
+- Se muestran tarjetas con nombre, marca, descripción y stock.
+- Puedo filtrar por marca (Todas, Zenú, Noel, Doria, Colcafé).
+- Los productos agotados se muestran diferenciados.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Árbol de componentes
 
-## Expanding the ESLint configuration
+- `App` → `Header`, `Producto`, `Footer`
+- `Producto` → `ProductCard` (reutilizable, recibe datos por props)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Estructura
+
+- `src/assets`: kit de marca global (`estilos.css`)
+- `src/components/layouts`: Header y Footer
+- `src/components/pages`: vistas (Producto)
+- `src/components/ProductCard`: tarjeta reutilizable
+
+## Ramas
+
+`main`, `dev`, `feature/catalogo/HU-01-`
+
+## Cómo ejecutar
+
+    npm install
+    npm run dev
