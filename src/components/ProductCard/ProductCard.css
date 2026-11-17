@@ -1,0 +1,56 @@
+.product-card {
+  background: var(--card);
+  border: 1px solid var(--linea);
+  border-top: 5px solid var(--verde);
+  border-radius: 14px;
+  padding: 1.2rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(17, 70, 34, 0.12);
+}
+
+.product-card__imagen {
+  font-size: 3rem;
+  text-align: center;
+  background: var(--crema);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.product-card__marca {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--teal);
+}
+
+.product-card__nombre {
+  margin: 0.3rem 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--verde-hondo);
+}
+
+.product-card__descripcion {
+  margin: 0 0 0.8rem;
+  font-size: 0.9rem;
+}
+
+.product-card__stock {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: #edf4e1;
+  color: var(--verde-hondo);
+}
+
+.product-card__stock--agotado {
+  background: #fbe4e5;
+  color: var(--rojo);
+}
